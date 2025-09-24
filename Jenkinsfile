@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'java-17'
+        jdk 'jdk-17'
         maven 'maven-3'
     }
     environment {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Git  Checkout') {
             steps {
-              git 'https://github.com/pj013525/Java-based-Project.git'
+              git branch: 'main', url: 'https://github.com/anumcait/Java-docker-jenkins-project.git'
             }
         }
         stage('Compilingthe code') {
@@ -52,28 +52,28 @@ pipeline {
         }
         stage('Built and Tag the Image') {
             steps {
-                withDockerRegistry(credentialsId: 'dockerhub-creds', url: 'https://index.docker.io/v1/') {
+                withDockerRegistry(credentialsId: 'DOCKERHUB-CREDS', url: 'https://index.docker.io/v1/') {
                     sh 'docker build -t java-project-image:v1 .'
-                    sh 'docker tag java-project-image:v1 pj013525/java-project-image:v1'
+                    sh 'docker tag java-project-image:v1 alivenidevops/java-project-image:v1'
                     sh 'docker images'
                 }
             }
         }
         stage('trivy image scan') {
             steps {
-                sh 'trivy image --format table -o image-report.html pj013525/java-project-image:v1'
+                sh 'trivy image --format table -o image-report.html alivenidevops/java-project-image:v1'
             }
         }
         stage('Push Image to DockerHub') {
             steps {
-                withDockerRegistry(credentialsId: 'dockerhub-creds', url: 'https://index.docker.io/v1/') {
-                    sh 'docker push pj013525/java-project-image:v1'
+                withDockerRegistry(credentialsId: 'DOCKERHUB-CREDS', url: 'https://index.docker.io/v1/') {
+                    sh 'docker push alivenidevops/java-project-image:v1'
                 } 
             }
         }    
         stage('Docker Container') {
             steps {
-                sh 'docker run -dt --name hotstarapp -p 9090:8080 pj013525/java-project-image:v1'
+                sh 'docker run -dt --name hotstarapp -p 9090:8080 alivenidevops/java-project-image:v1'
             }
         }  
     }
