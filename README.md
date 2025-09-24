@@ -1,12 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Java-docker-jenkins-project
-=======
+## Java-docker-jenkins-project
+
 Hotstar Clone Application
 
 This is a Hotstar Clone Application developed using JavaScript and Java-based backend. The project demonstrates CI/CD deployment using Jenkins, Docker, and SonarQube, hosted on AWS EC2.
 
-Project Overview
+---
+
+### Project Overview
 
 Frontend: JavaScript
 
@@ -20,7 +20,7 @@ Container Registry: Docker Hub
 
 Cloud Hosting: AWS EC2 (Ubuntu Server)
 
-Prerequisites
+### Prerequisites
 
 AWS EC2 instance (Ubuntu)
 
@@ -28,7 +28,7 @@ MobaXterm or any SSH client for remote login
 
 GitHub repository containing the project code
 
-Step 1: Server Setup
+### Step 1: Server Setup
 
 Launch an Ubuntu server on AWS EC2.
 
@@ -137,7 +137,7 @@ Step 6: Access Application
 
 Once the pipeline is successfully executed, access the application at:
 
-http://<EC2-Public-IP>:9090
+http://EC2-Public-IP:9090
 
 Tools Used
 Tool	Purpose
@@ -152,9 +152,9 @@ Docker	Containerization
 Docker Hub	Docker image storage
 Pipeline Overview
 
-Code Commit → GitHub webhook triggers Jenkins pipeline.
+## Code Commit → GitHub webhook triggers Jenkins pipeline.
 
-Build Stage → Maven builds the project.
+## Build Stage → Maven builds the project.
 
 Code Analysis → SonarQube performs code quality checks.
 
@@ -167,15 +167,12 @@ Security & Quality
 Trivy scans Docker images for vulnerabilities.
 
 SonarQube enforces code quality and quality gates.
->>>>>>> 19e802b (Update README.md)
-=======
 
->>>>>>> 9e54412 (Update README.md)
 This is a Hotstar clone Application that was written using JavaScript. It is a Java-based project
 -------
 
 The tools used in this project are:
-~~~
+
 AWS EC2
 Git, Github
 Maven
@@ -185,7 +182,7 @@ Trivy
 SoanrQube
 Docker
 Docker Hub
-~~~
+
 ---------
 
 Launch a Ubuntu server and log in to it using the Mobaxterm agent
@@ -232,7 +229,12 @@ Now set up the Webhook so that whenever changes are committed to the code, it wi
 
 After successful setup, now click on Build the Pipeline in Jenkins, and if the build is successful, take the Public-IP:9090 (from the Pipeline)
 
-<img width="1344" height="674" alt="ShareX_WRKCyzj9MN" src="https://github.com/user-attachments/assets/a5ce1927-de3d-4fc3-8b19-e17352e0ac0b" />
+<img width="1863" height="918" alt="Screenshot 2025-09-24 232406" src="https://github.com/user-attachments/assets/0176cc3b-679a-4d20-b5dc-433acfb07d60" />
+
+<img width="1861" height="848" alt="Screenshot 2025-09-24 232619" src="https://github.com/user-attachments/assets/e53e0a35-ec26-4744-96e4-a5bf16b1a3ae" />
+
+
+
 
 
 
