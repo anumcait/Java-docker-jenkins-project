@@ -1,6 +1,6 @@
 # Java-docker-jenkins-project
 
-Hotstar Clone Application
+## Hotstar Clone Application
 
 This is a Hotstar Clone Application developed using JavaScript and Java-based backend. The project demonstrates CI/CD deployment using Jenkins, Docker, and SonarQube, hosted on AWS EC2.
 
@@ -51,21 +51,22 @@ sudo apt update && sudo apt upgrade -y
 
 Install required tools:
 
-Java 17:
-
+**Java 17:**
+```bash
 sudo apt install openjdk-17-jdk -y
 java -version
+```
 
-
-Docker:
-
+**Docker:**
+```bash
 sudo apt install docker.io -y
 sudo systemctl enable docker
 sudo systemctl start docker
 docker --version
+```
 
+**Jenkins:**
 
-Jenkins:
 ```bash
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
