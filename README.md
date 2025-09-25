@@ -127,13 +127,12 @@ Open Jenkins in a browser: http://EC2-Public-IP:8080.
 - DockerHub username and password (key-value pairs)
 
 #### Step 3: SonarQube Setup
-Now, go to SonarQube home using IP:9000 and create a token and webhook using Jenkins URL (Administration --> Configuration --> Webhook)
 
 Access SonarQube: http://EC2-Public-IP:9000.
 
 Create a user token for Jenkins.
 
-Create a webhook pointing to Jenkins for code analysis triggers.
+Create a webhook pointing( (Administration --> Configuration --> Webhook) to Jenkins for code analysis triggers.
 
 ### Step 4: Repository Setup
 
