@@ -77,13 +77,14 @@ sudo apt update
 sudo apt install jenkins
 ```
 
-SonarQube (via Docker):
+**SonarQube (via Docker):**
 
 ```bash
 docker run -d — name sonar -p 9000:9000 sonarqube:lts-community
 ```
 
-Trivy (Security Scanner):
+**Trivy (Security Scanner):**
+
 ```bash
     sudo apt-get update
     sudo apt-get install -y wget apt-transport-https gnupg lsb-release
