@@ -109,7 +109,9 @@ Open Jenkins in a browser: http://EC2-Public-IP:8080.
 - Docker
 - Docker API
 - Docker Common
-- Maven
+- Maven Integration
+- Pipeline Maven Integration
+- Pipeline stage 
 
 **Configure tools in Manage Jenkins → Global Tool Configuration:**
   
@@ -126,7 +128,7 @@ Open Jenkins in a browser: http://EC2-Public-IP:8080.
 
 #### Step 3: SonarQube Setup
 Now, go to SonarQube home using IP:9000 and create a token and webhook using Jenkins URL
-Access SonarQube: http://<EC2-Public-IP>:9000.
+Access SonarQube: http://EC2-Public-IP:9000.
 
 Create a user token for Jenkins.
 
